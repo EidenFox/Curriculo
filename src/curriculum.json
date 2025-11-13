@@ -1,0 +1,114 @@
+{
+    "contato": {
+        "nome": "Daniel Rocha da Cruz",
+        "telefone": "(44) 99905-5690",
+        "email": "eidenfox404@gmail.com",
+        "titulo": "Estudante de ADS",
+        "links": [
+            {
+                "nome": "GitHub",
+                "url": "https://github.com/EidenFox"
+            },
+            {
+                "nome": "LinkedIn",
+                "url": "https://www.linkedin.com/in/daniel-rocha-cruz/"
+            }
+        ]
+    },
+    "qualificacoes": [
+        "Conhecimento em hardware e manutenção de computadores;",
+        "Conhecimento em informática (Windows, Microsoft Office, Linux, Google);",
+        "Experiência com formatação de computadores e notebooks;",
+        "Conhecimento em algoritmos e programação em C e C++;",
+        "Conhecimento em algoritmos e programação em Java;",
+        "Familiaridade em ambientes Linux (Ubuntu, Kali, Fedora);",
+        "Conhecimento em HTML e CSS;"
+    ],
+    "experiencias": [
+        {
+            "cargo": "Programador de Websites em Wordpress",
+            "empresa": "Negocio Virtual LTDA",
+            "periodo": "Maio 2023 - Agosto 2023",
+            "descricao": "Trabalhei como programador desenvolvendo sites e prestando suporte técnico das aplicações da empresa para clientes.",
+            "principais_atividades": [
+                "Desenvolvimento Wordpress",
+                "Estilização em CSS",
+                "Suporte técnico via Parsec e Anydesk"
+            ]
+        },
+        {
+            "cargo": "Assistência Técnica de Impressoras",
+            "empresa": "Ingatec",
+            "periodo": "Julho 2024",
+            "descricao": "Trabalhei com assistência técnica e manutenção de impressoras fazendo o atendimento de clientes via chat ou pessoalmente, analisando problemas, gerando orçamentos e prestando assistência nos reparos de impressoras de diversas marcas e modelos.",
+            "principais_atividades": [
+                "Manutenção e conservação de impressoras de diversos modelos",
+                "Assistencia técnica remota via Whatsapp e telefone",
+                "Organização e conservação de peças e partes de impressoras no estoque interno."
+            ]
+        }
+    ],
+    "formacao": [
+        {
+            "instituicao": "SENAC PARANÁ",
+            "curso": "Análise e Desenvolvimento de Sistemas",
+            "periodo": "07/2024 - Presente"
+        },
+        {
+            "instituicao": "UNICESUMAR",
+            "curso": "Engenharia de Software",
+            "periodo": "02/2022 - 07/2024 (trancado)"
+        }
+    ],
+    "cursos": [
+        {
+            "nome": "Hardware e Redes",
+            "organizacao": "Microlins",
+            "ano": "2016"
+        },
+        {
+            "nome": "Edição de videos com After Effects e Premiere",
+            "organizacao": "MxCursos",
+            "ano": "2018"
+        },
+        {
+            "nome": "Excel",
+            "organizacao": "MxCursos",
+            "ano": "2018"
+        },
+        {
+            "nome": "PHP Básico",
+            "organizacao": "CursoEmVideo",
+            "ano": "2023"
+        }
+    ],
+    "habilidades": {
+        "linguagens": [
+            "C",
+            "C++",
+            "Html",
+            "CSS",
+            "JavaScript",
+            "Java"
+        ],
+        "frameworks": [],
+        "bancos de dados": [
+            "MySql",
+            "DBeaver"
+        ],
+        "ferramentas_devops": [
+            "Git",
+            "GitHub"
+        ]
+    },
+    "idiomas": [
+        {
+            "idioma": "Português",
+            "nivel": "Fluente / Nativo"
+        },
+        {
+            "idioma": "Inglês",
+            "nivel": "Avançado"
+        }
+    ]
+}

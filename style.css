@@ -1,0 +1,226 @@
+:root {
+    --cor-principal: #0D6F69;
+    --cor-principal-clara: #e9f5f4;
+    --cor-texto-principal: #212529;
+    --cor-texto-secundaria: #495057;
+    --cor-fundo: #f8f9fa;
+    --cor-fundo-card: #ffffff;
+    --cor-borda: #dee2e6;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    margin: 0;
+    padding: 0;
+}
+
+#curriculo-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: var(--cor-fundo-card);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.curriculo-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+}
+
+.secao-cabecalho {
+    margin-bottom: 20px;
+}
+
+#nome {
+    font-size: 2.8em;
+    font-weight: 700;
+    color: var(--cor-texto-principal);
+    margin-bottom: 0px;
+}
+.subtitulo {
+    font-size: 1.3em;
+    font-weight: 400;
+    color: var(--cor-texto-secundaria);
+    margin-top: 5px;
+}
+
+.secao {
+    margin-bottom: 25px;
+}
+
+.secao h2 {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--cor-borda);
+}
+
+.lista-topicos {
+    padding-left: 20px;
+}
+.lista-topicos li {
+    margin-bottom: 8px;
+    color: var(--cor-texto-secundaria);
+}
+
+.item-experiencia, .item-formacao, .item-curso {
+    margin-bottom: 20px;
+}
+.item-experiencia h3, .item-formacao h3, .item-curso h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+.item-experiencia .empresa-periodo, 
+.item-formacao .instituicao-periodo,
+.item-curso .org-ano {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--cor-texto-secundaria);
+    margin-bottom: 5px;
+}
+.item-experiencia p {
+    margin: 5px 0;
+}
+.item-experiencia ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.coluna-lateral {
+    padding-left: 20px;
+    border-left: 1px solid var(--cor-borda);
+}
+
+.secao-lateral {
+    margin-bottom: 30px;
+}
+
+.secao-lateral h2 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--cor-principal);
+    margin-bottom: 15px;
+}
+
+.secao-oculta {
+    display: none !important;
+}
+
+.lista-contato {
+    list-style-type: none;
+    padding-left: 0;
+}
+.lista-contato li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.lista-contato li i {
+    width: 20px;
+    text-align: center;
+    margin-right: 12px;
+    color: var(--cor-principal);
+    font-size: 1.1em;
+}
+.lista-contato li img {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-right: 12px;
+    fill: var(--cor-principal);
+}
+.lista-contato li a, .lista-contato li span {
+    text-decoration: none;
+    color: var(--cor-texto-secundaria);
+    font-weight: 500;
+    word-break: break-all;
+}
+.lista-contato li a:hover {
+    color: var(--cor-principal);
+    text-decoration: underline;
+}
+
+.habilidade-categoria {
+    margin-bottom: 15px;
+}
+.habilidade-categoria strong {
+    font-weight: 600;
+    color: var(--cor-texto-principal);
+    font-size: 1.05em;
+    display: block;
+}
+.habilidade-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+.habilidade-tag {
+    background-color: var(--cor-principal-clara);
+    color: var(--cor-principal);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.lista-simples {
+    padding-left: 0;
+    list-style-type: none;
+}
+.lista-simples li {
+    margin-bottom: 5px;
+    color: var(--cor-texto-secundaria);
+}
+.lista-simples li strong {
+    color: var(--cor-texto-principal);
+    font-weight: 500;
+}
+
+@media print {
+    body {
+        background-color: var(--cor-fundo-card);
+    }
+    
+    #curriculo-container {
+        box-shadow: none;
+        border: none;
+        margin: 0;
+        padding: 0;
+        max-width: 100%;
+    }
+    
+    .curriculo-grid {
+        display: block;
+    }
+    
+    .coluna-lateral {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .secao-oculta {
+        display: none !important;
+    }
+    
+    .secao-lateral,
+    .item-experiencia,
+    .item-formacao,
+    .item-curso,
+    .habilidade-categoria {
+        page-break-inside: avoid;
+    }
+
+    .secao h2,
+    .secao-lateral h2 {
+        page-break-after: avoid;
+    }
+}

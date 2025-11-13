@@ -1,0 +1,114 @@
+{
+  "contact": {
+    "name": "Daniel Rocha da Cruz",
+    "phone": "(44) 99905-5690",
+    "email": "eidenfox404@gmail.com",
+    "title": "Systems Analysis and Development Student",
+    "links": [
+      {
+        "name": "GitHub",
+        "url": "https://github.com/EidenFox"
+      },
+      {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com/in/daniel-rocha-cruz/"
+      }
+    ]
+  },
+  "qualifications": [
+    "Knowledge of computer hardware and maintenance;",
+    "Knowledge of IT (Windows, Microsoft Office, Linux, Google);",
+    "Experience with formatting computers and notebooks;",
+    "Knowledge of algorithms and programming in C and C++;",
+    "Knowledge of algorithms and programming in Java;",
+    "Familiarity with Linux environments (Ubuntu, Kali, Fedora);",
+    "Knowledge of HTML and CSS;"
+  ],
+  "experience": [
+    {
+      "role": "WordPress Website Developer",
+      "company": "Negocio Virtual LTDA",
+      "period": "May 2023 - August 2023",
+      "description": "Worked as a developer building sites and providing technical support for the company's applications for clients.",
+      "main_activities": [
+        "WordPress Development",
+        "CSS Styling",
+        "Technical support via Parsec and Anydesk"
+      ]
+    },
+    {
+      "role": "Printer Technician",
+      "company": "Ingatec",
+      "period": "July 2024",
+      "description": "Worked with technical assistance and maintenance of printers, handling customer service via chat or in-person, analyzing problems, generating quotes, and assisting in the repair of printers from various brands and models.",
+      "main_activities": [
+        "Maintenance and conservation of various printer models",
+        "Remote technical assistance via WhatsApp and phone",
+        "Organization and conservation of printer parts and components in internal stock."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "SENAC PARANÁ",
+      "course": "Systems Analysis and Development",
+      "period": "07/2024 - Present"
+    },
+    {
+      "institution": "UNICESUMAR",
+      "course": "Software Engineering",
+      "period": "02/2022 - 07/2024 (on hold)"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Hardware and Networks",
+      "organization": "Microlins",
+      "year": "2016"
+    },
+    {
+      "name": "Video Editing with After Effects and Premiere",
+      "organization": "MxCursos",
+      "year": "2018"
+    },
+    {
+      "name": "Excel",
+      "organization": "MxCursos",
+      "year": "2018"
+    },
+    {
+      "name": "Basic PHP",
+      "organization": "CursoEmVideo",
+      "year": "2023"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "C",
+      "C++",
+      "Html",
+      "CSS",
+      "JavaScript",
+      "Java"
+    ],
+    "frameworks": [],
+    "databases": [
+      "MySql",
+      "DBeaver"
+    ],
+    "devops_tools": [
+      "Git",
+      "GitHub"
+    ]
+  },
+  "languages": [
+    {
+      "language": "Portuguese",
+      "level": "Fluent / Native"
+    },
+    {
+      "language": "English",
+      "level": "Advanced"
+    }
+  ]
+}
