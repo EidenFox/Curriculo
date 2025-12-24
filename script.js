@@ -39,7 +39,7 @@ function renderizarCurriculo(dados) {
     
     nomeEl.textContent = dados.contato.nome || "Nome não informado";
     tituloEl.textContent = dados.contato.titulo || "";
-    document.title = "Currículo de " + dados.contato.nome;
+    document.title = dados.contato.nome;
 
     contatoListaEl.innerHTML = '';
     let temDadosContato = false;
