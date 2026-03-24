@@ -22,7 +22,7 @@
         "Conhecimento em algoritmos e programação em C e C++;",
         "Conhecimento em algoritmos e programação em Java;",
         "Familiaridade em ambientes Linux (Ubuntu, Kali, Fedora);",
-        "Conhecimento em HTML e CSS;"
+        "Conhecimento em HTML, CSS e PhP;"
     ],
     "experiencias": [
         {
@@ -45,6 +45,16 @@
                 "Manutenção e conservação de impressoras de diversos modelos",
                 "Assistencia técnica remota via Whatsapp e telefone",
                 "Organização e conservação de peças e partes de impressoras no estoque interno."
+            ]
+        },
+        {
+            "cargo": "Assistência Técnica de Sistema - Estágio",
+            "empresa": "Gold Software",
+            "periodo": "Fevereiro 2026 - Presente",
+            "descricao": "Trabalho com assistência técnica e dos sistemas da Empresa fazendo o atendimento de clientes via chat ou telefone, analisando problemas, propondo soluções e prestando assistência remota.",
+            "principais_atividades": [
+                "Assistencia técnica sobre as APIs da Meta",
+                "Assistencia técnica remota via Whatsapp e telefone"
             ]
         }
     ],
@@ -89,7 +99,8 @@
             "Html",
             "CSS",
             "JavaScript",
-            "Java"
+            "Java",
+            "PhP"
         ],
         "frameworks": [],
         "bancos de dados": [

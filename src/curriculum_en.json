@@ -22,7 +22,7 @@
     "Knowledge of algorithms and programming in C and C++;",
     "Knowledge of algorithms and programming in Java;",
     "Familiarity with Linux environments (Ubuntu, Kali, Fedora);",
-    "Knowledge of HTML and CSS;"
+    "Knowledge of HTML, CSS and PhP;"
   ],
   "experience": [
     {
@@ -45,6 +45,16 @@
         "Maintenance and conservation of various printer models",
         "Remote technical assistance via WhatsApp and phone",
         "Organization and conservation of printer parts and components in internal stock."
+      ]
+    },
+    {
+      "role": "Systems Technical Assistance - Intern",
+      "company": "Gold Software",
+      "period": "February 2026 - Present",
+      "description": "Work with technical assistance for the company's systems, providing customer service via chat or phone, analyzing problems, proposing solutions, and providing remote assistance.",
+      "main_activities": [
+        "Technical assistance regarding Meta APIs",
+        "Remote technical assistance via WhatsApp and phone"
       ]
     }
   ],
@@ -89,7 +99,8 @@
       "Html",
       "CSS",
       "JavaScript",
-      "Java"
+      "Java",
+      "PhP"
     ],
     "frameworks": [],
     "databases": [
