@@ -10,13 +10,13 @@ let nomeEl, tituloEl, qualificacoesEl, experienciasEl, formacaoEl, cursosEl, con
 
 function criarItemContato(svgData, texto, url = null) {
     const li = document.createElement('li');
-    
+
     const img = document.createElement('img');
     img.src = svgData;
     img.alt = "Contact icon";
-    
+
     let content;
-    
+
     if (url) {
         const a = document.createElement('a');
         a.href = url;
@@ -29,14 +29,14 @@ function criarItemContato(svgData, texto, url = null) {
         span.textContent = texto;
         content = span;
     }
-    
+
     li.appendChild(img);
     li.appendChild(content);
     contatoListaEl.appendChild(li);
 }
 
 function renderizarCurriculo(data) {
-    
+
     // --- Header (Name/Title) ---
     nomeEl.textContent = data.contact.name || "Name not provided";
     tituloEl.textContent = data.contact.title || "";
@@ -45,23 +45,23 @@ function renderizarCurriculo(data) {
     // --- Contact (LOGIC WITH ICONS) ---
     contatoListaEl.innerHTML = '';
     let hasContactData = false;
-    
+
     if (data.contact.email && data.contact.email.trim() !== "") {
         criarItemContato(SVG_ICONS.email, data.contact.email, 'mailto:' + data.contact.email);
         hasContactData = true;
     }
     if (data.contact.phone && data.contact.phone.trim() !== "") {
-        criarItemContato(SVG_ICONS.phone, data.contact.phone, 'tel:' + data.contact.phone.replace(/\D/g,''));
+        criarItemContato(SVG_ICONS.phone, data.contact.phone, 'tel:' + data.contact.phone.replace(/\D/g, ''));
         hasContactData = true;
     }
-    
+
     if (data.contact.links && data.contact.links.length > 0) {
         data.contact.links.forEach(link => {
             if (link.url && link.url.trim() !== "") {
                 let icon = SVG_ICONS.link;
                 if (link.name.toLowerCase().includes('linkedin')) icon = SVG_ICONS.linkedin;
                 if (link.name.toLowerCase().includes('github')) icon = SVG_ICONS.github;
-                
+
                 criarItemContato(icon, link.url, link.url);
                 hasContactData = true;
             }
@@ -88,7 +88,7 @@ function renderizarCurriculo(data) {
     } else {
         secaoQualificacoes.classList.add('secao-oculta');
     }
-    
+
     // --- Experience ---
     experienciasEl.innerHTML = '';
     const secaoExperiencias = experienciasEl.closest('.secao');
@@ -96,13 +96,13 @@ function renderizarCurriculo(data) {
         data.experience.forEach(exp => {
             const div = document.createElement('div');
             div.className = 'item-experiencia';
-            
+
             let innerHTML = `
                 <h3>${exp.role}</h3>
                 <div class="empresa-periodo">${exp.company} | ${exp.period}</div>
                 <p>${exp.description}</p>
             `;
-            
+
             if (exp.main_activities && exp.main_activities.length > 0) {
                 innerHTML += '<ul>';
                 exp.main_activities.forEach(atv => {
@@ -110,7 +110,7 @@ function renderizarCurriculo(data) {
                 });
                 innerHTML += '</ul>';
             }
-            
+
             div.innerHTML = innerHTML;
             experienciasEl.appendChild(div);
         });
@@ -118,7 +118,7 @@ function renderizarCurriculo(data) {
     } else {
         secaoExperiencias.classList.add('secao-oculta');
     }
-    
+
     // --- Education ---
     formacaoEl.innerHTML = '';
     const secaoFormacao = formacaoEl.closest('.secao');
@@ -128,7 +128,7 @@ function renderizarCurriculo(data) {
             div.className = 'item-formacao';
             div.innerHTML = `
                 <h3>${f.course}</h3>
-                <div class."instituicao-periodo">${f.institution} | ${f.period}</div>
+                <div class="instituicao-periodo">${f.institution} | ${f.period}</div>
             `;
             formacaoEl.appendChild(div);
         });
@@ -144,10 +144,17 @@ function renderizarCurriculo(data) {
         data.courses.forEach(c => {
             const div = document.createElement('div');
             div.className = 'item-curso';
-            div.innerHTML = `
+            if (c.certification_link) {
+                div.innerHTML = `
+                <h3><a href="${c.certification_link}" target="_blank" rel="noopener noreferrer">${c.name}</a></h3>
+                <div class="org-ano">${c.organization} | ${c.year}</div>
+                `;
+            } else {
+                div.innerHTML = `
                 <h3>${c.name}</h3>
                 <div class="org-ano">${c.organization} | ${c.year}</div>
-            `;
+                `;
+            }
             cursosEl.appendChild(div);
         });
         secaoCursos.classList.remove('secao-oculta');
@@ -163,16 +170,16 @@ function renderizarCurriculo(data) {
             if (tagList && tagList.length > 0) {
                 const divCat = document.createElement('div');
                 divCat.className = 'habilidade-categoria';
-                
+
                 const formattedCategory = categoryKey.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
-                
+
                 const strong = document.createElement('strong');
                 strong.textContent = formattedCategory;
                 divCat.appendChild(strong);
-                
+
                 const tagsContainer = document.createElement('div');
                 tagsContainer.className = 'habilidade-tags-container';
-                
+
                 tagList.forEach(tagName => {
                     if (tagName && tagName.trim() !== "") {
                         const span = document.createElement('span');
@@ -182,13 +189,13 @@ function renderizarCurriculo(data) {
                         hasSkillsData = true;
                     }
                 });
-                
+
                 divCat.appendChild(tagsContainer);
                 habilidadesContainerEl.appendChild(divCat);
             }
         }
     }
-    
+
     const secaoHabilidades = habilidadesContainerEl.closest('.secao-lateral');
     if (!hasSkillsData) {
         secaoHabilidades.classList.add('secao-oculta');
@@ -209,7 +216,7 @@ function renderizarCurriculo(data) {
                 hasLanguageData = true;
             }
         });
-        
+
         if (!hasLanguageData) {
             secaoIdiomas.classList.add('secao-oculta');
         } else {
@@ -232,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contatoListaEl = document.getElementById('contato-lista');
     habilidadesContainerEl = document.getElementById('habilidades-container');
     idiomasEl = document.getElementById('idiomas');
-    
+
 
     fetch('../src/curriculum_en.json')
         .then(response => {

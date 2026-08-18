@@ -185,6 +185,23 @@ body {
     font-weight: 500;
 }
 
+.btn-detalhes {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo-card);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: filter 0.2s ease-in-out;
+}
+
+.btn-detalhes:hover {
+    filter: brightness(0.85);
+}
+
 @media print {
     body {
         background-color: var(--cor-fundo-card);

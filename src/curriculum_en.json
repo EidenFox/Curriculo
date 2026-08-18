@@ -48,12 +48,14 @@
       ]
     },
     {
-      "role": "Systems Technical Assistance - Intern",
-      "company": "Gold Software",
+      "role": "Technical Support and API Integration Analyst",
+      "company": "Gold Software | NotificameHub",
       "period": "February 2026 - Present",
-      "description": "Work with technical assistance for the company's systems, providing customer service via chat or phone, analyzing problems, proposing solutions, and providing remote assistance.",
+      "description": "Provide technical support for the company's APIs that connect with official Meta APIs (WhatsApp, Instagram, Facebook) and other platforms such as TikTok and Mercado Libre. Assist in the use and integration of these APIs utilizing tools like Postman, Hoppscotch, N8N, and JDK, alongside managing platform usage, providing customer service via chat or phone, analyzing problems, proposing solutions, and providing remote assistance.",
       "main_activities": [
-        "Technical assistance regarding Meta APIs",
+        "Technical support and integration of Meta and third-party APIs",
+        "API testing and validation using Postman, Hoppscotch, N8N, and JDK",
+        "General technical support and platform usage assistance",
         "Remote technical assistance via WhatsApp and phone"
       ]
     }
@@ -71,6 +73,48 @@
     }
   ],
   "courses": [
+    {
+      "name": "C Programming For Beginners - Learn C Language from Scratch",
+      "organization": "Udemy",
+      "certification_link": "https://www.udemy.com/certificate/UC-0dfe8596-3195-4316-b18a-5e8ff55c1ded/",
+      "year": "2026"
+    },
+    {
+      "name": "Complete C++ Programming Course",
+      "organization": "Udemy",
+      "certification_link": "https://www.udemy.com/certificate/UC-ca1a8f95-c3bd-4485-b8ca-1222927b2b1d/",
+      "year": "2026"
+    },
+    {
+      "name": "Java primeiros passos: Lógica de Programação e Algoritmos",
+      "organization": "Udemy",
+      "certification_link": "https://www.udemy.com/certificate/UC-f64ca4de-a78a-45b8-8855-fb5fb6ca1d5e/",
+      "year": "2026"
+    },
+    {
+      "name": "Lógica de Programação em Python",
+      "organization": "Udemy",
+      "certification_link": "https://www.udemy.com/certificate/UC-5ed2e47c-7181-4ae3-bbe9-4cba1d9c89b6/",
+      "year": "2026"
+    },
+    {
+      "name": "Python 3 COMPLETO",
+      "organization": "Udemy",
+      "certification_link": "https://www.udemy.com/certificate/UC-742cda58-47b5-41ac-a589-73485f18d5c6/",
+      "year": "2026"
+    },
+    {
+      "name": "Python Automático- Aprenda a Programar e Automatizar do Zero",
+      "organization": "Udemy",
+      "certification_link": "https://www.udemy.com/certificate/UC-2b711c5f-e378-4cde-86ad-b5ebccc85fc5/",
+      "year": "2026"
+    },
+    {
+      "name": "Técnico Manutenção de Impressoras e Multifuncionais Laser",
+      "organization": "Udemy",
+      "certification_link": "https://www.udemy.com/certificate/UC-0edf7b29-b2af-429c-81a6-f24b137f167d/",
+      "year": "2026"
+    },
     {
       "name": "Hardware and Networks",
       "organization": "Microlins",
@@ -100,12 +144,12 @@
       "CSS",
       "JavaScript",
       "Java",
-      "PhP"
+      "PhP",
+      "SQL"
     ],
     "frameworks": [],
     "databases": [
-      "MySql",
-      "DBeaver"
+      "MySql"
     ],
     "devops_tools": [
       "Git",

@@ -42,6 +42,7 @@ body {
     color: var(--cor-texto-principal);
     margin-bottom: 0px;
 }
+
 .subtitulo {
     font-size: 1.3em;
     font-weight: 400;
@@ -65,20 +66,27 @@ body {
 .lista-topicos {
     padding-left: 20px;
 }
+
 .lista-topicos li {
     margin-bottom: 8px;
     color: var(--cor-texto-secundaria);
 }
 
-.item-experiencia, .item-formacao, .item-curso {
+.item-experiencia,
+.item-formacao,
+.item-curso {
     margin-bottom: 20px;
 }
-.item-experiencia h3, .item-formacao h3, .item-curso h3 {
+
+.item-experiencia h3,
+.item-formacao h3,
+.item-curso h3 {
     font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 0;
 }
-.item-experiencia .empresa-periodo, 
+
+.item-experiencia .empresa-periodo,
 .item-formacao .instituicao-periodo,
 .item-curso .org-ano {
     font-size: 1em;
@@ -86,9 +94,11 @@ body {
     color: var(--cor-texto-secundaria);
     margin-bottom: 5px;
 }
+
 .item-experiencia p {
     margin: 5px 0;
 }
+
 .item-experiencia ul {
     padding-left: 20px;
     margin-top: 5px;
@@ -118,11 +128,13 @@ body {
     list-style-type: none;
     padding-left: 0;
 }
+
 .lista-contato li {
     display: flex;
     align-items: center;
     margin-bottom: 12px;
 }
+
 .lista-contato li i {
     width: 20px;
     text-align: center;
@@ -130,6 +142,7 @@ body {
     color: var(--cor-principal);
     font-size: 1.1em;
 }
+
 .lista-contato li img {
     width: 20px;
     height: 20px;
@@ -137,12 +150,15 @@ body {
     margin-right: 12px;
     fill: var(--cor-principal);
 }
-.lista-contato li a, .lista-contato li span {
+
+.lista-contato li a,
+.lista-contato li span {
     text-decoration: none;
     color: var(--cor-texto-secundaria);
     font-weight: 500;
     word-break: break-all;
 }
+
 .lista-contato li a:hover {
     color: var(--cor-principal);
     text-decoration: underline;
@@ -151,18 +167,21 @@ body {
 .habilidade-categoria {
     margin-bottom: 15px;
 }
+
 .habilidade-categoria strong {
     font-weight: 600;
     color: var(--cor-texto-principal);
     font-size: 1.05em;
     display: block;
 }
+
 .habilidade-tags-container {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 8px;
 }
+
 .habilidade-tag {
     background-color: var(--cor-principal-clara);
     color: var(--cor-principal);
@@ -176,20 +195,39 @@ body {
     padding-left: 0;
     list-style-type: none;
 }
+
 .lista-simples li {
     margin-bottom: 5px;
     color: var(--cor-texto-secundaria);
 }
+
 .lista-simples li strong {
     color: var(--cor-texto-principal);
     font-weight: 500;
+}
+
+.btn-detalhes {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo-card);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: filter 0.2s ease-in-out;
+}
+
+.btn-detalhes:hover {
+    filter: brightness(0.85);
 }
 
 @media print {
     body {
         background-color: var(--cor-fundo-card);
     }
-    
+
     #curriculo-container {
         box-shadow: none;
         border: none;
@@ -197,11 +235,11 @@ body {
         padding: 0;
         max-width: 100%;
     }
-    
+
     .curriculo-grid {
         display: block;
     }
-    
+
     .coluna-lateral {
         border-left: none;
         padding-left: 0;
@@ -210,7 +248,7 @@ body {
     .secao-oculta {
         display: none !important;
     }
-    
+
     .secao-lateral,
     .item-experiencia,
     .item-formacao,

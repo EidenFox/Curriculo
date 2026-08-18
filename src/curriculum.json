@@ -48,13 +48,15 @@
             ]
         },
         {
-            "cargo": "Assistência Técnica de Sistema - Estágio",
-            "empresa": "Gold Software",
+            "cargo": "Analista de suporte técnico e integração de APIs",
+            "empresa": "Gold Software | NotificameHub",
             "periodo": "Fevereiro 2026 - Presente",
-            "descricao": "Trabalho com assistência técnica e dos sistemas da Empresa fazendo o atendimento de clientes via chat ou telefone, analisando problemas, propondo soluções e prestando assistência remota.",
+            "descricao": "Presto suporte técnico para as APIs da empresa que conectam com as APIs oficiais da Meta (WhatsApp, Instagram, Facebook) e outras plataformas como TikTok e Mercado Livre. Auxilio no uso e integração dessas APIs utilizando ferramentas como Postman, Hoppscotch, N8N e JDK, além de gerenciar uso do site, fazendo o atendimento de clientes via chat ou telefone, analisando problemas, propondo soluções e prestando assistência remota.",
             "principais_atividades": [
-                "Assistencia técnica sobre as APIs da Meta",
-                "Assistencia técnica remota via Whatsapp e telefone"
+                "Suporte técnico e integração de APIs da Meta e de terceiros",
+                "Testes e validação de APIs utilizando Postman, Hoppscotch, N8N e JDK",
+                "Suporte técnico geral e auxílio no uso da plataforma",
+                "Assistência técnica remota via WhatsApp e telefone"
             ]
         }
     ],
@@ -71,6 +73,48 @@
         }
     ],
     "cursos": [
+        {
+            "nome": "C Programming For Beginners - Learn C Language from Scratch",
+            "organizacao": "Udemy",
+            "link_certificado": "https://www.udemy.com/certificate/UC-0dfe8596-3195-4316-b18a-5e8ff55c1ded/",
+            "ano": "2026"
+        },
+        {
+            "nome": "Complete C++ Programming Course",
+            "organizacao": "Udemy",
+            "link_certificado": "https://www.udemy.com/certificate/UC-ca1a8f95-c3bd-4485-b8ca-1222927b2b1d/",
+            "ano": "2026"
+        },
+        {
+            "nome": "Java primeiros passos: Lógica de Programação e Algoritmos",
+            "organizacao": "Udemy",
+            "link_certificado": "https://www.udemy.com/certificate/UC-f64ca4de-a78a-45b8-8855-fb5fb6ca1d5e/",
+            "ano": "2026"
+        },
+        {
+            "nome": "Lógica de Programação em Python",
+            "organizacao": "Udemy",
+            "link_certificado": "https://www.udemy.com/certificate/UC-5ed2e47c-7181-4ae3-bbe9-4cba1d9c89b6/",
+            "ano": "2026"
+        },
+        {
+            "nome": "Python 3 COMPLETO",
+            "organizacao": "Udemy",
+            "link_certificado": "https://www.udemy.com/certificate/UC-742cda58-47b5-41ac-a589-73485f18d5c6/",
+            "ano": "2026"
+        },
+        {
+            "nome": "Python Automático- Aprenda a Programar e Automatizar do Zero",
+            "organizacao": "Udemy",
+            "link_certificado": "https://www.udemy.com/certificate/UC-2b711c5f-e378-4cde-86ad-b5ebccc85fc5/",
+            "ano": "2026"
+        },
+        {
+            "nome": "Técnico Manutenção de Impressoras e Multifuncionais Laser",
+            "organizacao": "Udemy",
+            "link_certificado": "https://www.udemy.com/certificate/UC-0edf7b29-b2af-429c-81a6-f24b137f167d/",
+            "ano": "2026"
+        },
         {
             "nome": "Hardware e Redes",
             "organizacao": "Microlins",
@@ -100,12 +144,12 @@
             "CSS",
             "JavaScript",
             "Java",
-            "PhP"
+            "PhP",
+            "SQL"
         ],
         "frameworks": [],
         "bancos de dados": [
-            "MySql",
-            "DBeaver"
+            "MySql"
         ],
         "ferramentas_devops": [
             "Git",

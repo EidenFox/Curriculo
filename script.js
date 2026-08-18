@@ -10,13 +10,13 @@ let nomeEl, tituloEl, qualificacoesEl, experienciasEl, formacaoEl, cursosEl, con
 
 function criarItemContato(svgData, texto, url = null) {
     const li = document.createElement('li');
-    
+
     const img = document.createElement('img');
     img.src = svgData;
     img.alt = "Ícone de contato";
-    
+
     let conteudo;
-    
+
     if (url) {
         const a = document.createElement('a');
         a.href = url;
@@ -29,37 +29,37 @@ function criarItemContato(svgData, texto, url = null) {
         span.textContent = texto;
         conteudo = span;
     }
-    
+
     li.appendChild(img);
     li.appendChild(conteudo);
     contatoListaEl.appendChild(li);
 }
 
 function renderizarCurriculo(dados) {
-    
+
     nomeEl.textContent = dados.contato.nome || "Nome não informado";
     tituloEl.textContent = dados.contato.titulo || "";
     document.title = dados.contato.nome;
 
     contatoListaEl.innerHTML = '';
     let temDadosContato = false;
-    
+
     if (dados.contato.email && dados.contato.email.trim() !== "") {
         criarItemContato(SVG_ICONS.email, dados.contato.email, 'mailto:' + dados.contato.email);
         temDadosContato = true;
     }
     if (dados.contato.telefone && dados.contato.telefone.trim() !== "") {
-        criarItemContato(SVG_ICONS.phone, dados.contato.telefone, 'tel:' + dados.contato.telefone.replace(/\D/g,''));
+        criarItemContato(SVG_ICONS.phone, dados.contato.telefone, 'tel:' + dados.contato.telefone.replace(/\D/g, ''));
         temDadosContato = true;
     }
-    
+
     if (dados.contato.links && dados.contato.links.length > 0) {
         dados.contato.links.forEach(link => {
             if (link.url && link.url.trim() !== "") {
                 let icone = SVG_ICONS.link;
                 if (link.nome.toLowerCase().includes('linkedin')) icone = SVG_ICONS.linkedin;
                 if (link.nome.toLowerCase().includes('github')) icone = SVG_ICONS.github;
-                
+
                 criarItemContato(icone, link.url, link.url);
                 temDadosContato = true;
             }
@@ -85,20 +85,20 @@ function renderizarCurriculo(dados) {
     } else {
         secaoQualificacoes.classList.add('secao-oculta');
     }
-    
+
     experienciasEl.innerHTML = '';
     const secaoExperiencias = experienciasEl.closest('.secao');
     if (dados.experiencias && dados.experiencias.length > 0) {
         dados.experiencias.forEach(exp => {
             const div = document.createElement('div');
             div.className = 'item-experiencia';
-            
+
             let htmlInterno = `
                 <h3>${exp.cargo}</h3>
                 <div class="empresa-periodo">${exp.empresa} | ${exp.periodo}</div>
                 <p>${exp.descricao}</p>
             `;
-            
+
             if (exp.principais_atividades && exp.principais_atividades.length > 0) {
                 htmlInterno += '<ul>';
                 exp.principais_atividades.forEach(atv => {
@@ -106,7 +106,7 @@ function renderizarCurriculo(dados) {
                 });
                 htmlInterno += '</ul>';
             }
-            
+
             div.innerHTML = htmlInterno;
             experienciasEl.appendChild(div);
         });
@@ -114,7 +114,7 @@ function renderizarCurriculo(dados) {
     } else {
         secaoExperiencias.classList.add('secao-oculta');
     }
-    
+
     formacaoEl.innerHTML = '';
     const secaoFormacao = formacaoEl.closest('.secao');
     if (dados.formacao && dados.formacao.length > 0) {
@@ -138,10 +138,17 @@ function renderizarCurriculo(dados) {
         dados.cursos.forEach(c => {
             const div = document.createElement('div');
             div.className = 'item-curso';
-            div.innerHTML = `
+            if (c.link_certificado) {
+                div.innerHTML = `
+                <h3><a href="${c.link_certificado}" target="_blank" rel="noopener noreferrer">${c.nome}</a></h3>
+                <div class="org-ano">${c.organizacao} | ${c.ano}</div>
+                `;
+            } else {
+                div.innerHTML = `
                 <h3>${c.nome}</h3>
                 <div class="org-ano">${c.organizacao} | ${c.ano}</div>
-            `;
+                `;
+            }
             cursosEl.appendChild(div);
         });
         secaoCursos.classList.remove('secao-oculta');
@@ -156,16 +163,16 @@ function renderizarCurriculo(dados) {
             if (lista && lista.length > 0) {
                 const divCat = document.createElement('div');
                 divCat.className = 'habilidade-categoria';
-                
+
                 const categoriaFormatada = categoria.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
-                
+
                 const strong = document.createElement('strong');
                 strong.textContent = categoriaFormatada;
                 divCat.appendChild(strong);
-                
+
                 const tagsContainer = document.createElement('div');
                 tagsContainer.className = 'habilidade-tags-container';
-                
+
                 lista.forEach(tagNome => {
                     if (tagNome && tagNome.trim() !== "") {
                         const span = document.createElement('span');
@@ -175,13 +182,13 @@ function renderizarCurriculo(dados) {
                         temDadosHabilidades = true;
                     }
                 });
-                
+
                 divCat.appendChild(tagsContainer);
                 habilidadesContainerEl.appendChild(divCat);
             }
         }
     }
-    
+
     const secaoHabilidades = habilidadesContainerEl.closest('.secao-lateral');
     if (!temDadosHabilidades) {
         secaoHabilidades.classList.add('secao-oculta');
@@ -201,7 +208,7 @@ function renderizarCurriculo(dados) {
                 temDadosIdiomas = true;
             }
         });
-        
+
         if (!temDadosIdiomas) {
             secaoIdiomas.classList.add('secao-oculta');
         } else {
@@ -223,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contatoListaEl = document.getElementById('contato-lista');
     habilidadesContainerEl = document.getElementById('habilidades-container');
     idiomasEl = document.getElementById('idiomas');
-    
+
     fetch('src/curriculum.json')
         .then(response => {
             if (!response.ok) {
